@@ -36,7 +36,7 @@ public class ConcessionariaDto {
     public static ConcessionariaDto from(Concessionaria concessionaria) {
         return  new ConcessionariaDto((concessionaria.getTag())
                 ,concessionaria.getModel()
-                , concessionaria.getVehicletype()
+                , concessionaria.getVehicleType()
                 ,concessionaria.getColor()
                 ,concessionaria.getAno()
                 ,concessionaria.getPrice());

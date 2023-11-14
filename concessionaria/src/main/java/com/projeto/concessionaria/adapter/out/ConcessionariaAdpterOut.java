@@ -5,10 +5,11 @@ import com.projeto.concessionaria.repository.ConcessionariaRepository;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
 import java.util.List;
-
+@Service
 public class ConcessionariaAdpterOut implements ConcessionariaPortOut{
     private final MongoTemplate mongoTemplate;
     private final ConcessionariaRepository concessionariaRepository;

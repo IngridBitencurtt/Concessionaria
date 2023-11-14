@@ -3,10 +3,11 @@ package com.projeto.concessionaria.core;
 import com.projeto.concessionaria.adapter.out.ConcessionariaPortOut;
 import com.projeto.concessionaria.domain.Concessionaria;
 import com.projeto.concessionaria.repository.ConcessionariaControl;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class ConcessionariaCore implements ConcessionariaPortIn {
     public final ConcessionariaPortOut concessionariaPortOut;
 
@@ -22,7 +23,7 @@ public class ConcessionariaCore implements ConcessionariaPortIn {
         List<Concessionaria> concessionariaList = new ArrayList<>();
 
         for (ConcessionariaControl concessionariaControl : concessionariaControlList){
-            Concessionaria concessionaria = Concessionaria.from(ConcessionariaControl);
+            Concessionaria concessionaria = Concessionaria.from(concessionariaControl);
             concessionariaList.add(concessionaria);
 
         }
